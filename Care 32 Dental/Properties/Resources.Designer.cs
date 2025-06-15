@@ -143,6 +143,16 @@ namespace Care_32_Dental.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sales_printed_receipt_icon_vector_260nw_1936141444 {
+            get {
+                object obj = ResourceManager.GetObject("sales-printed-receipt-icon-vector-260nw-1936141444", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);

@@ -34,19 +34,22 @@
             this.txtdoc = new Zeroit.Framework.Metro.ZeroitMetroTextbox();
             this.txtamt = new Zeroit.Framework.Metro.ZeroitMetroTextbox();
             this.txttreatment = new Zeroit.Framework.Metro.ZeroitMetroTextbox();
-            this.txtpatientid = new Zeroit.Framework.Metro.ZeroitMetroTextbox();
+            this.txtpatient = new Zeroit.Framework.Metro.ZeroitMetroTextbox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.btnbill = new ns1.BunifuImageButton();
             this.btnclose = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
             this.bunifuThinButton22 = new ns1.BunifuThinButton2();
             this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new ns1.BunifuGradientPanel();
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.ktReport1 = new Kimtoo.Reports.ktReport(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.btnbill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnclose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +59,7 @@
             this.textBox1.Location = new System.Drawing.Point(406, 303);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 121);
+            this.textBox1.Size = new System.Drawing.Size(241, 106);
             this.textBox1.TabIndex = 119;
             // 
             // txtdoc
@@ -113,23 +116,23 @@
             this.txttreatment.Size = new System.Drawing.Size(241, 36);
             this.txttreatment.TabIndex = 106;
             // 
-            // txtpatientid
+            // txtpatient
             // 
-            this.txtpatientid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtpatientid.BanIllegalChars = true;
-            this.txtpatientid.Border = 1;
-            this.txtpatientid.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.txtpatientid.DefaultColor = System.Drawing.Color.White;
-            this.txtpatientid.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.txtpatientid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpatientid.HideSelection = false;
-            this.txtpatientid.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.txtpatientid.LineOnly = true;
-            this.txtpatientid.Location = new System.Drawing.Point(406, 47);
-            this.txtpatientid.Name = "txtpatientid";
-            this.txtpatientid.PasswordChar = '\0';
-            this.txtpatientid.Size = new System.Drawing.Size(241, 36);
-            this.txtpatientid.TabIndex = 105;
+            this.txtpatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtpatient.BanIllegalChars = true;
+            this.txtpatient.Border = 1;
+            this.txtpatient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.txtpatient.DefaultColor = System.Drawing.Color.White;
+            this.txtpatient.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.txtpatient.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpatient.HideSelection = false;
+            this.txtpatient.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.txtpatient.LineOnly = true;
+            this.txtpatient.Location = new System.Drawing.Point(406, 47);
+            this.txtpatient.Name = "txtpatient";
+            this.txtpatient.PasswordChar = '\0';
+            this.txtpatient.Size = new System.Drawing.Size(241, 36);
+            this.txtpatient.TabIndex = 105;
             // 
             // label8
             // 
@@ -180,6 +183,25 @@
             this.label1.Size = new System.Drawing.Size(124, 23);
             this.label1.TabIndex = 100;
             this.label1.Text = "Patient Name";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // btnbill
+            // 
+            this.btnbill.BackColor = System.Drawing.Color.Transparent;
+            this.btnbill.Image = global::Care_32_Dental.Properties.Resources.sales_printed_receipt_icon_vector_260nw_1936141444;
+            this.btnbill.ImageActive = null;
+            this.btnbill.Location = new System.Drawing.Point(251, 420);
+            this.btnbill.Name = "btnbill";
+            this.btnbill.Size = new System.Drawing.Size(71, 71);
+            this.btnbill.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnbill.TabIndex = 120;
+            this.btnbill.TabStop = false;
+            this.btnbill.Zoom = 10;
+            this.btnbill.Click += new System.EventHandler(this.btnbill_Click);
             // 
             // btnclose
             // 
@@ -292,16 +314,23 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(216, 518);
             this.bunifuGradientPanel1.TabIndex = 118;
             // 
-            // bunifuElipse1
+            // ktReport1
             // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this;
+            this.ktReport1.AlternativeRowBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.ktReport1.AlternativeRowGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            this.ktReport1.HeaderBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(183)))), ((int)(((byte)(197)))));
+            this.ktReport1.HeaderFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
+            this.ktReport1.HeaderGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            this.ktReport1.RowDefaultBackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ktReport1.RowDefaultFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
+            this.ktReport1.RowDefaultGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
             // 
             // bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 517);
+            this.Controls.Add(this.btnbill);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.bunifuThinButton23);
@@ -311,7 +340,7 @@
             this.Controls.Add(this.txtdoc);
             this.Controls.Add(this.txtamt);
             this.Controls.Add(this.txttreatment);
-            this.Controls.Add(this.txtpatientid);
+            this.Controls.Add(this.txtpatient);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -321,6 +350,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "bill";
             this.Text = "bill";
+            ((System.ComponentModel.ISupportInitialize)(this.btnbill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnclose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -339,7 +369,7 @@
         private Zeroit.Framework.Metro.ZeroitMetroTextbox txtdoc;
         private Zeroit.Framework.Metro.ZeroitMetroTextbox txtamt;
         private Zeroit.Framework.Metro.ZeroitMetroTextbox txttreatment;
-        private Zeroit.Framework.Metro.ZeroitMetroTextbox txtpatientid;
+        private Zeroit.Framework.Metro.ZeroitMetroTextbox txtpatient;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
@@ -347,5 +377,7 @@
         private System.Windows.Forms.Label label1;
         private ns1.BunifuGradientPanel bunifuGradientPanel1;
         private ns1.BunifuElipse bunifuElipse1;
+        private ns1.BunifuImageButton btnbill;
+        private Kimtoo.Reports.ktReport ktReport1;
     }
 }
