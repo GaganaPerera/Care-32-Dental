@@ -16,7 +16,7 @@ namespace Care_32_Dental
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new Doctor());
         }
     }
 }

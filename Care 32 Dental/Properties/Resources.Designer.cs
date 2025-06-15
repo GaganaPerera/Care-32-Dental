@@ -63,6 +63,16 @@ namespace Care_32_Dental.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ai_generated_dental_clinic_advertisment_background_with_copy_space_free_photo {
+            get {
+                object obj = ResourceManager.GetObject("ai-generated-dental-clinic-advertisment-background-with-copy-space-free-photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blue_Modern_Dental_Clinic_Logo {
             get {
                 object obj = ResourceManager.GetObject("Blue Modern Dental Clinic Logo", resourceCulture);

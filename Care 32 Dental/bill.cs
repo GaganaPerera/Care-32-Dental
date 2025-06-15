@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Care_32_Dental
 {
-    public partial class Form1 : Form
+    public partial class bill : Form
     {
-        public Form1()
+        public bill()
         {
             InitializeComponent();
         }

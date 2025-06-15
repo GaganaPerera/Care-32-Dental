@@ -44,7 +44,7 @@ namespace Care_32_Dental
                     if (userCount > 0)
                     {
                         MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form1 mainForm = new Form1();
+                        Doctor mainForm = new Doctor();
                         mainForm.Show();
                         this.Hide();
 
